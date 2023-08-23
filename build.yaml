@@ -11,9 +11,10 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 #
+# - board: bluemicro840_v1
 ---
 include:
-  - board: bluemicro840_v1
+  - board: nice_nano_v2
     shield: corne_left
-  - board: bluemicro840_v1
+  - board: nice_nano_v2
     shield: corne_right
