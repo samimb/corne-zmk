@@ -7,10 +7,13 @@
 #define LOWER 1
 #define RAISE 2
 #define adjust 3
+
 / {
+
   behaviors {
-#include "macros.dtsi"
+    #include "macros.dtsi"
   };
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -24,28 +27,28 @@
     };
     lower_layer {
       bindings = <
-	&kp TAB   &kp N1 &kp N2 &kp N3   &kp N4 &kp N5          &kp N6        &kp N7        &kp N8 &kp N9    &kp N0        &kp SE_PLUS
-	&trans    &trans &trans &trans   &trans &trans          &kp LEFT      &kp DOWN      &kp UP &kp RIGHT &trans        &trans
-	&kp LSHFT &trans &trans &trans   &trans &macro_brackets &macro_parens &macro_braces &macro_dquotes   &macro_quotes &kp LS(SE_N7)
+	&kp TAB   &kp N1 &kp N2 &kp N3   &kp N4 &kp N5          &kp N6        &kp N7        &kp N8         &kp N9        &kp N0        &kp SE_PLUS
+	&trans    &trans &trans &trans   &trans &trans          &kp EQUAL     &kp LBKT      &kp RBKT       &kp BSLH      &kp SE_GRAVE
+	&kp LSHFT &trans &trans &trans   &trans &macro_brackets &macro_parens &macro_braces &macro_dquotes &macro_quotes &kp LS(SE_N7)
 	                        &kp LGUI &trans &kp SPACE       &kp RET       &mo 3         &kp RALT
 	>;
     };
 
     raise_layer {
       bindings = <
-	&kp  TAB  &kp EXCL     &kp AT       &kp HASH &kp DLLR &kp PRCNT   &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-	&kp LCTRL &kp C_VOL_UP &kp C_BRI_UP &trans   &trans   &bootloader &bootloader &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp SE_GRAVE
-	&kp LSHFT &kp C_VOL_DN &kp C_BRI_DN &trans   &trans   &trans      &kp UNDER   &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+	&kp  TAB  &kp EXCL     &kp AT       &kp HASH &kp DLLR &kp PRCNT   &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &kp BSPC
+	&kp LCTRL &kp C_VOL_UP &kp C_BRI_UP &trans   &trans   &trans      &kp LEFT    &kp DOWN  &kp UP          &kp RIGHT &trans   &trans
+	&kp LSHFT &kp C_VOL_DN &kp C_BRI_DN &trans   &trans   &trans      &kp UNDER   &kp PLUS  &kp LBRC        &kp RBRC  &kp PIPE &kp TILDE
 	                                    &kp LGUI &trans   &kp SPACE   &kp RET     &trans    &kp RALT
 	>;
     };
-		adjust_layer {
-			bindings = <
-   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT &kp C_PP   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
-   &trans &trans &trans &trans &trans &trans                                 &trans &trans &trans &trans &trans &trans 
-   &kp CAPS &trans  &trans &trans   &kp C_BRI_DN  &kp C_BRI_UP               &trans &trans &trans &trans &trans &trans
-                                        &trans &trans &trans                 &trans &trans &trans 
-                        >;
-                };
+    adjust_layer {
+      bindings = <
+        &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT   &kp C_PP        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
+        &trans     &trans       &trans       &trans     &trans       &bootloader     &bootloader  &trans       &trans       &trans       &trans       &trans 
+        &kp CAPS   &trans       &trans       &trans     &kp C_BRI_DN &kp C_BRI_UP    &trans       &trans       &trans       &trans       &trans       &trans
+                                             &trans     &trans       &trans          &trans 	  &trans       &trans 
+        >;
+    };
   };
-  };
+};
