@@ -3,10 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keys_se.h"
 
-//#define DEFAULT 0
-//#define LOWER 1
-//#define RAISE 2
-//#define ADJUST 3
+#define DEF 0
+#define LOW 1
+#define RSE 2
+#define ADJ 3
 
 / {
 
@@ -14,51 +14,55 @@
     #include "macros.dtsi"
   };
 
- // conditional_layers {
- //   compatible = "zmk,conditional-layers";
- //   tri_layer {
- //     if-layers = <1 2>;
- //     then-layer = <3>;
- //   };
- // };
+//  conditional_layers {
+//    compatible = "zmk,conditional-layers";
+//    tri_layer {
+//      if-layers = <1 2>;
+//      then-layer = <3>;
+//    };
+//  };
 
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
+      label = "DEF"
       bindings = <
-	&kp ESC    &kp Q   &kp W &kp E    &kp R &kp T       &kp Y   &kp U &kp I        &kp O      &kp P        &kp SE_A_RING
-	&kp TAB    &kp A   &kp S &kp D    &kp F &kp G       &kp H   &kp J &kp K        &kp L      &kp SEMI     &kp SQT
-	&kp LCTRL  &kp Z   &kp X &kp C    &kp V &kp B       &kp N   &kp M &kp SE_COMMA &kp SE_DOT &kp SE_MINUS &kp RSHIFT
-	                         &kp LGUI &mo 1 &kp BSPC    &kp RET &mo 2 &kp SPACE
+	&kp ESC    &kp Q   &kp W &kp E    &kp R   &kp T       &kp Y   &kp U   &kp I        &kp O      &kp P        &kp SE_A_RING
+	&kp TAB    &kp A   &kp S &kp D    &kp F   &kp G       &kp H   &kp J   &kp K        &kp L      &kp SEMI     &kp SQT
+	&kp LCTRL  &kp Z   &kp X &kp C    &kp V   &kp B       &kp N   &kp M   &kp SE_COMMA &kp SE_DOT &kp SE_MINUS &kp RSHIFT
+	                         &kp LGUI &mo LOW &kp BSPC    &kp RET &mo RSE &kp SPACE
 	>;
     };
 
     lower_layer {
+      label = "LOW"
       bindings = <
 	&kp TAB   &kp N1 &kp N2 &kp N3   &kp N4 &kp N5          &kp N6        &kp N7        &kp N8         &kp N9        &kp N0        &kp SE_PLUS
 	&trans    &trans &trans &trans   &trans &trans          &kp EQUAL     &kp LBKT      &kp RBKT       &kp BSLH      &kp SE_GRAVE
 	&kp LSHFT &trans &trans &trans   &trans &macro_brackets &macro_parens &macro_braces &macro_dquotes &macro_quotes &kp LS(SE_N7)
-	                        &kp LGUI &trans &kp SPACE       &kp RET       &trans        &kp RALT
+	                        &kp LGUI &trans &kp SPACE       &kp RET       &mo ADJ       &kp RALT
 	>;
     };
 
     raise_layer {
+      label = "RSE"
       bindings = <
 	&kp  TAB  &kp EXCL     &kp AT       &kp HASH &kp DLLR &kp PRCNT   &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &kp SE_STAR
 	&kp LCTRL &kp C_VOL_UP &kp C_BRI_UP &trans   &trans   &trans      &kp LEFT    &kp DOWN  &kp UP          &kp RIGHT &trans   &kp SE_SQT
 	&kp LSHFT &kp C_VOL_DN &kp C_BRI_DN &trans   &trans   &trans      &kp UNDER   &kp PLUS  &kp LBRC        &kp RBRC  &kp PIPE &kp TILDE
-	                                    &kp LGUI &trans   &kp SPACE   &kp RET     &trans    &kp RALT
+	                                    &kp LGUI &mo ADJ  &kp SPACE   &kp RET     &trans    &kp RALT
 	>;
     };
 
-//    adjust_layer {
-//      bindings = <
-//        &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT   &kp C_PP        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
-//        &trans     &trans       &trans       &trans     &trans       &trans          &trans       &trans       &trans       &trans       &trans       &trans 
-//        &kp CAPS   &trans       &trans       &trans     &kp C_BRI_DN &kp C_BRI_UP    &trans       &trans       &trans       &trans       &trans       &trans
-//                                             &trans     &trans       &trans          &trans 	  &trans       &trans 
-//        >;
-//    };
+    adjust_layer {
+      label = "ADJ"
+      bindings = <
+        &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT   &kp C_PP        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
+        &trans     &trans       &trans       &trans     &trans       &trans          &trans       &trans       &trans       &trans       &trans       &trans 
+        &kp CAPS   &trans       &trans       &trans     &kp C_BRI_DN &kp C_BRI_UP    &trans       &trans       &trans       &trans       &trans       &trans
+                                             &trans     &trans       &trans          &trans 	  &trans       &trans 
+        >;
+    };
   };
 };
