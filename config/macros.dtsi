@@ -1,30 +1,30 @@
-  macro_quotes: macro_quotes {
+  quotes: quotes {
     compatible = "zmk,behavior-macro";
-    label = "macro_quotes";
+    label = "quotes";
     #binding-cells = <0>;
     bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
   };
-  macro_dquotes: macro_dquotes {
+  dquotes: dquotes {
     compatible = "zmk,behavior-macro";
-    label = "macro_dquotes";
+    label = "dquotes";
     #binding-cells = <0>;
     bindings = <&kp LS(SE_N2)>, <&kp LS(SE_N2)>, <&kp LEFT>;
   };
-  macro_braces: macro_braces {
+  braces: braces {
     compatible = "zmk,behavior-macro";
-    label = "macro_braces";
+    label = "braces";
     #binding-cells = <0>;
     bindings = <&kp LS(RA(SE_N8))>, <&kp LS(RA(SE_N9))>, <&kp LEFT>;
   };
-  macro_parens: macro_parens {
+  parens: parens {
     compatible = "zmk,behavior-macro";
-    label = "macro_parens";
+    label = "parens";
     #binding-cells = <0>;
     bindings = <&kp LS(SE_N8)>, <&kp LS(SE_N9)>, <&kp LEFT>;
   };
-  macro_brackets: macro_brackets {
+  brackets: brackets {
     compatible = "zmk,behavior-macro";
-    label = "macro_brackets";
+    label = "brackets";
     #binding-cells = <0>;
     bindings = <&kp RA(SE_N8)>, <&kp RA(SE_N9)>, <&kp LEFT>;
   };

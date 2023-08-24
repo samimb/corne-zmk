@@ -31,20 +31,20 @@
     lower_layer {
       label = "LOW";
       bindings = <
-	&kp TAB   &kp N1 &kp N2 &kp N3   &kp N4 &kp N5          &kp N6        &kp N7        &kp N8         &kp N9        &kp N0        &kp SE_PLUS
-	&trans    &trans &trans &trans   &trans &trans          &kp EQUAL     &kp LBKT      &kp RBKT       &kp BSLH      &kp SE_GRAVE
-	&kp LSHFT &trans &trans &trans   &trans &macro_brackets &macro_parens &macro_braces &macro_dquotes &macro_quotes &kp LS(SE_N7)
-	                        &kp LGUI &trans &kp SPACE       &kp RET       &mo ADJ       &kp RALT
+	&trans    &kp SE_N1 &kp SE_N2 &kp SE_N3 &kp SE_N4 &kp SE_N5   &kp SE_N6 &kp SE_N7 &kp SE_N8 &kp SE_N9 &kp SE_N0    &kp SE_PLUS
+	&trans    &trans    &trans    &trans    &trans    &trans      &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH  &kp SE_GRAVE &kp SE_PIPE
+	&trans    &trans    &trans    &trans    &trans    &brackets   &parens   &braces   &dquotes  &quotes   &trans       &kp TILDE
+	                              &kp LGUI  &trans    &kp SPACE   &kp RET   &mo ADJ   &kp RALT
 	>;
     };
 
     raise_layer {
       label = "RSE";
       bindings = <
-	&kp  TAB  &kp EXCL     &kp AT       &kp HASH &kp DLLR &kp PRCNT   &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &kp SE_STAR
-	&kp LCTRL &kp C_VOL_UP &kp C_BRI_UP &trans   &trans   &trans      &kp LEFT    &kp DOWN  &kp UP          &kp RIGHT &trans   &kp SE_SQT
-	&kp LSHFT &kp C_VOL_DN &kp C_BRI_DN &trans   &trans   &trans      &kp UNDER   &kp PLUS  &kp LBRC        &kp RBRC  &kp PIPE &kp TILDE
-	                                    &kp LGUI &mo ADJ  &kp SPACE   &kp RET     &trans    &kp RALT
+	&trans &kp LS(SE_N1) &kp LS(SE_N2) &kp LS(SE_N3) &kp LS(SE_N4) &kp LS(SE_N5) &kp LS(SE_N6)   &kp LS(SE_N7) &kp LS(SE_N8) &kp LS(SE_N9) &kp LS(SE_N0) &kp SE_STAR
+	&trans &kp C_VOL_UP  &kp C_BRI_UP  &kp C_PREV    &kp C_PP      &trans        &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &trans        &kp SE_SQT
+	&trans &kp C_VOL_DN  &kp C_BRI_DN  &kp C_NEXT    &trans        &trans        &kp UNDER       &kp PLUS      &kp LBRC      &kp RBRC      &kp PIPE      &kp SE_TILDE
+	                                                 &kp LGUI      &mo ADJ       &kp SPACE       &kp RET       &trans        &kp RALT
 	>;
     };
 
