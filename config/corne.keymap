@@ -33,7 +33,7 @@
       bindings = <
 	&trans    &kp SE_N1 &kp SE_N2 &kp SE_N3 &kp SE_N4 &kp SE_N5   &kp SE_N6 &kp SE_N7 &kp SE_N8 &kp SE_N9 &kp SE_N0    &kp SE_PLUS
 	&trans    &trans    &trans    &trans    &trans    &trans      &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH  &kp SE_GRAVE &kp SE_PIPE
-	&trans    &trans    &trans    &trans    &trans    &brackets   &parens   &braces   &dquotes  &quotes   &trans       &kp TILDE
+	&LSHIFT   &trans    &trans    &trans    &trans    &brackets   &parens   &braces   &dquotes  &quotes   &trans       &kp TILDE
 	                              &kp LGUI  &trans    &kp SPACE   &kp RET   &mo ADJ   &kp RALT
 	>;
     };
@@ -41,10 +41,10 @@
     raise_layer {
       label = "RSE";
       bindings = <
-	&trans   &kp LS(SE_N1) &kp LS(SE_N2) &kp LS(SE_N3) &kp LS(SE_N4) &kp LS(SE_N5) &kp LS(SE_N6)   &kp LS(SE_N7) &kp LS(SE_N8) &kp LS(SE_N9) &kp LS(SE_N0) &kp SE_STAR
-	&trans   &kp C_VOL_UP  &kp C_BRI_UP  &kp C_PREV    &kp C_PP      &trans        &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &trans        &kp SE_GRAVE
-	&kp CAPS &kp C_VOL_DN  &kp C_BRI_DN  &kp C_NEXT    &trans        &trans        &kp UNDER       &kp PLUS      &kp LBRC      &kp RBRC      &kp RA(SE_N8) &kp SE_TILDE
-	                                                   &kp LGUI      &mo ADJ       &kp SPACE       &kp RET       &trans        &kp RALT
+	&trans     &kp LS(SE_N1) &kp LS(SE_N2) &kp LS(SE_N3) &kp LS(SE_N4) &kp LS(SE_N5) &kp LS(SE_N6)   &kp LS(SE_N7) &kp LS(SE_N8) &kp LS(SE_N9) &kp LS(SE_N0) &kp SE_STAR
+	&kp CAPS   &kp C_VOL_UP  &kp C_BRI_UP  &kp C_PREV    &kp C_PP      &trans        &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &trans        &kp BSLH
+	&kp LSHIFT &kp C_VOL_DN  &kp C_BRI_DN  &kp C_NEXT    &trans        &trans        &kp UNDER       &kp PLUS      &kp LBRC      &kp RBRC      &kp RA(SE_N7) &kp SE_TILDE
+	                                                     &kp LGUI      &mo ADJ       &kp SPACE       &kp RET       &trans        &kp RALT
 	>;
     };
 
