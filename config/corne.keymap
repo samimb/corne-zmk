@@ -42,8 +42,8 @@
       label = "RSE";
       bindings = <
 	&trans   &kp LS(SE_N1) &kp LS(SE_N2) &kp LS(SE_N3) &kp LS(SE_N4) &kp LS(SE_N5) &kp LS(SE_N6)   &kp LS(SE_N7) &kp LS(SE_N8) &kp LS(SE_N9) &kp LS(SE_N0) &kp SE_STAR
-	&trans   &kp C_VOL_UP  &kp C_BRI_UP  &kp C_PREV    &kp C_PP      &trans        &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &trans        &kp SE_SQT
-	&kp CAPS &kp C_VOL_DN  &kp C_BRI_DN  &kp C_NEXT    &trans        &trans        &kp UNDER       &kp PLUS      &kp LBRC      &kp RBRC      &kp PIPE      &kp SE_TILDE
+	&trans   &kp C_VOL_UP  &kp C_BRI_UP  &kp C_PREV    &kp C_PP      &trans        &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &trans        &kp SE_GRAVE
+	&kp CAPS &kp C_VOL_DN  &kp C_BRI_DN  &kp C_NEXT    &trans        &trans        &kp UNDER       &kp PLUS      &kp LBRC      &kp RBRC      &kp RA(SE_N8) &kp SE_TILDE
 	                                                   &kp LGUI      &mo ADJ       &kp SPACE       &kp RET       &trans        &kp RALT
 	>;
     };
