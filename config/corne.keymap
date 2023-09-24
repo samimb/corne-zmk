@@ -43,7 +43,7 @@
 	&trans      &kp SE_N1 &kp SE_N2 &kp SE_N3 &kp SE_N4 &kp SE_N5   &kp SE_N6 &kp SE_N7 &kp SE_N8 &kp SE_N9 &kp SE_N0    &kp LS(SE_SQT)
 	&trans      &trans    &trans    &trans    &trans    &trans      &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH  &kp SE_GRAVE &kp SE_PIPE
 	&kp LSHIFT  &trans    &trans    &trans    &trans    &brackets   &parens   &braces   &dquotes  &quotes   &trans       &kp TILDE
-	                                &kp LGUI  &trans    &kp BKSP    &kp RET   &mo ADJ   &kp RALT
+	                                &kp LGUI  &trans    &kp BSPC    &kp RET   &mo ADJ   &kp RALT
 	>;
     };
 
@@ -53,7 +53,7 @@
 	&trans     &kp LS(SE_N1) &kp LS(SE_N2) &kp LS(SE_N3) &kp LS(SE_N4) &kp LS(SE_N5) &kp LS(SE_N6)   &kp LS(SE_N7) &kp LS(SE_N8) &kp LS(SE_N9) &kp LS(SE_N0) &kp UNDER
 	&kp CAPS   &kp C_VOL_UP  &kp C_BRI_UP  &kp C_PREV    &kp C_PP      &trans        &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &kp LS(BSLH)  &kp BSLH
 	&kp LSHIFT &kp C_VOL_DN  &kp C_BRI_DN  &kp C_NEXT    &trans        &trans        &kp LS(SE_STAR) &kp PLUS      &kp LBRC      &kp RBRC      &kp RA(SE_N7) &kp SE_TILDE
-	                                                     &kp LGUI      &mo ADJ       &kp BKSP        &kp RET       &trans        &kp RALT
+	                                                     &kp LGUI      &mo ADJ       &kp BSPC        &kp RET       &trans        &kp RALT
 	>;
     };
 
