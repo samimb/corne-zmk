@@ -2,29 +2,29 @@
     compatible = "zmk,behavior-macro";
     label = "quotes";
     #binding-cells = <0>;
-    bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
+    bindings = <&kp SQT>, <&kp SQT>, <&kp ESC>, <&kp LEFT>, <&kp I>;
   };
   dquotes: dquotes {
     compatible = "zmk,behavior-macro";
     label = "dquotes";
     #binding-cells = <0>;
-    bindings = <&kp LS(SE_N2)>, <&kp LS(SE_N2)>, <&kp LEFT>;
+    bindings = <&kp LS(SE_N2)>, <&kp LS(SE_N2)>, <&kp ESC>, <&kp LEFT>, <&kp I>;
   };
   braces: braces {
     compatible = "zmk,behavior-macro";
     label = "braces";
     #binding-cells = <0>;
-    bindings = <&kp LS(RA(SE_N8))>, <&kp LS(RA(SE_N9))>, <&kp LEFT>;
+    bindings = <&kp LS(RA(SE_N8))>, <&kp LS(RA(SE_N9))>, <&kp ESC>, <&kp LEFT>, <&kp I>;
   };
   parens: parens {
     compatible = "zmk,behavior-macro";
     label = "parens";
     #binding-cells = <0>;
-    bindings = <&kp LS(SE_N8)>, <&kp LS(SE_N9)>, <&kp LEFT>;
+    bindings = <&kp LS(SE_N8)>, <&kp LS(SE_N9)>, <&kp ESC>, <&kp LEFT>, <&kp I>;
   };
   brackets: brackets {
     compatible = "zmk,behavior-macro";
     label = "brackets";
     #binding-cells = <0>;
-    bindings = <&kp RA(SE_N8)>, <&kp RA(SE_N9)>, <&kp LEFT>;
+    bindings = <&kp RA(SE_N8)>, <&kp RA(SE_N9)>, <&kp ESC>, <&kp LEFT>, <&kp I>;
   };
