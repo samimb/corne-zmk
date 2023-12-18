@@ -3,10 +3,15 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keys_se.h"
 
-#define MAIN 0
-#define LOWER 1
-#define RAISE 2
-#define ADJUST 3
+#define DEF 0
+#define LOW 1
+#define RSE 2
+#define ADJ 3
+
+&mt {
+  tapping-term-ms = <200>;
+  flavor = "tap-preferred";
+};
 
 / {
     chosen {
@@ -21,16 +26,24 @@
 
   behaviors {
     #include "macros.dtsi"
+    esc: tap_dance_1 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_1";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp Q>, <&kp ESC>;
+    };
   };
+
 
 
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
-      label = "MAIN";
+      label = "DEF";
       bindings = <
-	&none &kp Q &kp W &kp E     &kp R   &kp T             &kp Y        &kp U   &kp I        &kp O      &kp P        &none
+	&none &esc  &kp W &kp E     &kp R   &kp T             &kp Y        &kp U   &kp I        &kp O      &kp P        &none
 	&none &kp A &kp S &kp D     &kp F   &kp G             &kp H        &kp J   &kp K        &kp L      &kp TILDE    &none
 	&none &kp Z &kp X &kp C     &kp V   &kp B             &kp N        &kp M   &kp SE_COMMA &kp SE_DOT &kp SE_MINUS &none
 	                  &kp LCTRL &mo LOW &kp LGUI          &mt RGUI RET &mo RSE &kp SPACE
@@ -38,32 +51,32 @@
     };
 
     lower_layer {
-      label = "LOWER";
+      label = "LOW";
       bindings = <
-	&none &kp SE_N1 &kp SE_N2 &kp SE_N3 &kp SE_N4 &kp SE_N5                   &kp LBKT          &kp RBKT     &kp EQUAL    &kp SE_PLUS &kp SE_A_RING  &none
-	&none &kp SE_N6 &kp SE_N7 &kp SE_N8 &kp SE_N9 &kp SE_N0                   &kp RBKT          &kp BSLH     &kp SE_PIPE  &kp SEMI    &kp SQT        &none
-	&none &kp ESC   &kp TAB   &parens   &braces   &brackets                   &kp RA(LS(SE_N7)) &kp SE_GRAVE &kp SE_TILDE &trans      &kp TILDE      &none
-	                          &kp LALT  &trans    &kp BSPC                    &mt RGUI RET      &mo ADJ      &kp RSHIFT
+	&none &kp SE_N1 &kp SE_N2 &kp SE_N3 &kp SE_N4 &kp SE_N5           &kp LBKT          &kp RBKT     &kp EQUAL    &kp SE_PLUS &kp SE_A_RING  &none
+	&none &kp SE_N6 &kp SE_N7 &kp SE_N8 &kp SE_N9 &kp SE_N0           &kp RBKT          &kp BSLH     &kp SE_PIPE  &kp SEMI    &kp SQT        &none
+	&none &kp ESC   &kp TAB   &parens   &braces   &brackets           &kp RA(LS(SE_N7)) &kp SE_GRAVE &kp SE_TILDE &trans      &kp TILDE      &none
+	                          &kp LALT  &trans    &kp BSPC            &mt RGUI RET      &mo ADJ      &kp RSHIFT
 	>;
     };
 
     raise_layer {
-      label = "RAISE";
+      label = "RSE";
       bindings = <
 	&none &kp C_VOL_UP    &kp C_BRI_UP  &kp C_PREV &kp C_PP     &kp UNDER            &kp LS(SE_N1) &kp LS(SE_N2) &kp LS(SE_N3) &kp LS(SE_N4) &kp LS(SE_N5) &none
 	&none &kp C_VOL_DN    &kp C_BRI_DN  &kp C_NEXT &kp SE_TILDE &kp BSLH             &kp LS(SE_N6) &kp LS(SE_N7) &kp LS(SE_N8) &kp LS(SE_N9) &kp LS(SE_N0) &none
 	&none &kp LS(SE_STAR) &kp PLUS      &kp LBRC   &kp RBRC     &kp RA(SE_N7)        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp LS(BSLH)  &none
-	                                    &kp LALT   &mo ADJ      &kp BSPC             &mt RGUI RET  &trans        &kp RSHIFT
+	                                    &kp LALT   &mo ADJ      &kp DEL              &mt RGUI RET  &trans        &kp RSHIFT
 	>;
     };
 
     adjust_layer {
-      label = "ADJUST";
+      label = "ADJ";
       bindings = <
         &none &trans       &trans       &trans        &trans       &trans             &kp F1 &kp F2  &kp F3  &kp F4  &kp F5   &none
 	&none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4       &kp F6 &kp F6  &kp F7  &kp F8  &kp F9   &none
 	&none &trans       &trans       &bt BT_CLR    &trans       &trans             &kp F9 &kp F10 &kp F11 &kp F12 &kp CAPS &none
-	                                 &kp LGUI     &trans       &kp BSPC           &mt RGUI RET &trans   &kp RSHIFT
+	                                 &kp LGUI     &trans       &kp DEL            &mt RGUI RET &trans   &kp RSHIFT
         >;
     };
   };
