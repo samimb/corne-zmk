@@ -3,10 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keys_se.h"
 
-#define DEF 0
-#define LOW 1
-#define RSE 2
-#define ADJ 3
+#define MAIN 0
+#define LOWER 1
+#define RAISE 2
+#define ADJUST 3
 
 / {
     chosen {
@@ -28,42 +28,42 @@
     compatible = "zmk,keymap";
 
     default_layer {
-      label = "DEF";
+      label = "MAIN";
       bindings = <
-	&trans &kp Q &kp W &kp E     &kp R   &kp T       &kp Y   &kp U   &kp I        &kp O      &kp P        &trans
-	&trans &kp A &kp S &kp D     &kp F   &kp G       &kp H   &kp J   &kp K        &kp L      &kp TILDE    &trans
-	&trans &kp Z &kp X &kp C     &kp V   &kp B       &kp N   &kp M   &kp SE_COMMA &kp SE_DOT &kp SE_MINUS &trans
-	                   &kp LCTRL &mo LOW &kp LGUI    &kp RET &mo RSE &kp SPACE
+	&none &kp Q &kp W &kp E     &kp R   &kp T             &kp Y        &kp U   &kp I        &kp O      &kp P        &none
+	&none &kp A &kp S &kp D     &kp F   &kp G             &kp H        &kp J   &kp K        &kp L      &kp TILDE    &none
+	&none &kp Z &kp X &kp C     &kp V   &kp B             &kp N        &kp M   &kp SE_COMMA &kp SE_DOT &kp SE_MINUS &none
+	                  &kp LCTRL &mo LOW &kp LGUI          &mt RGUI RET &mo RSE &kp SPACE
 	>;
     };
 
     lower_layer {
-      label = "LOW";
+      label = "LOWER";
       bindings = <
-	&trans &kp SE_N1 &kp SE_N2 &kp SE_N3   &kp SE_N4 &kp SE_N5   &kp SE_N6         &kp SE_N7    &kp SE_N8    &kp SE_N9    &kp SE_N0     &trans
-	&trans &kp ESC   &kp LALT  &kp SE_PLUS &kp EQUAL &kp LBKT    &kp RBKT          &kp BSLH     &kp SE_PIPE  &kp TILDE    &kp SE_A_RING &trans
-	&trans &kp TAB   &dquotes  &parens     &braces   &brackets   &kp RA(LS(SE_N7)) &kp SE_GRAVE &kp SE_TILDE &kp SEMI     &kp SQT       &trans
-	                           &kp LGUI    &trans    &kp BSPC    &kp RET           &mo ADJ      &kp RSHIFT
+	&none &kp SE_N1 &kp SE_N2 &kp SE_N3 &kp SE_N4 &kp SE_N5                   &kp LBKT          &kp RBKT     &kp EQUAL    &kp SE_PLUS &kp SE_A_RING  &none
+	&none &kp SE_N6 &kp SE_N7 &kp SE_N8 &kp SE_N9 &kp SE_N0                   &kp RBKT          &kp BSLH     &kp SE_PIPE  &kp SEMI    &kp SQT        &none
+	&none &kp ESC   &kp TAB   &parens   &braces   &brackets                   &kp RA(LS(SE_N7)) &kp SE_GRAVE &kp SE_TILDE &trans      &kp TILDE      &none
+	                          &kp LALT  &trans    &kp BSPC                    &mt RGUI RET      &mo ADJ      &kp RSHIFT
 	>;
     };
 
     raise_layer {
-      label = "RSE";
+      label = "RAISE";
       bindings = <
-	&trans &kp LS(SE_N1) &kp LS(SE_N2) &kp LS(SE_N3) &kp LS(SE_N4) &kp LS(SE_N5) &kp LS(SE_N6)   &kp LS(SE_N7) &kp LS(SE_N8) &kp LS(SE_N9) &kp LS(SE_N0) &trans
-	&trans &kp C_VOL_UP  &kp C_BRI_UP  &kp C_PREV    &kp C_PP      &kp UNDER     &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &kp LS(BSLH)  &trans
-	&trans &kp C_VOL_DN  &kp C_BRI_DN  &kp C_NEXT    &kp SE_TILDE  &kp BSLH      &kp LS(SE_STAR) &kp PLUS      &kp LBRC      &kp RBRC      &kp RA(SE_N7) &trans 
-	                                   &kp LGUI      &mo ADJ       &kp BSPC      &kp RET         &trans        &kp RSHIFT
+	&none &kp C_VOL_UP    &kp C_BRI_UP  &kp C_PREV &kp C_PP     &kp UNDER            &kp LS(SE_N1) &kp LS(SE_N2) &kp LS(SE_N3) &kp LS(SE_N4) &kp LS(SE_N5) &none
+	&none &kp C_VOL_DN    &kp C_BRI_DN  &kp C_NEXT &kp SE_TILDE &kp BSLH             &kp LS(SE_N6) &kp LS(SE_N7) &kp LS(SE_N8) &kp LS(SE_N9) &kp LS(SE_N0) &none
+	&none &kp LS(SE_STAR) &kp PLUS      &kp LBRC   &kp RBRC     &kp RA(SE_N7)        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp LS(BSLH)  &none
+	                                    &kp LALT   &mo ADJ      &kp BSPC             &mt RGUI RET  &trans        &kp RSHIFT
 	>;
     };
 
     adjust_layer {
-      label = "ADJ";
+      label = "ADJUST";
       bindings = <
-        &trans &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV  &kp C_NEXT &kp C_PP &kp CAPS &trans  &trans  &trans
-	&trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp F1      &kp F3     &kp F5   &kp F7   &kp F9  &kp F11 &trans
-	&trans &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR   &kp F2      &kp F4     &kp F6   &kp F8   &kp F10 &kp F12 &trans
-	                    &kp LGUI     &trans       &kp BSPC    &kp RET    &trans   &kp RSHIFT
+        &none &trans       &trans       &trans        &trans       &trans             &kp F1 &kp F2  &kp F3  &kp F4  &kp F5   &none
+	&none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4       &kp F6 &kp F6  &kp F7  &kp F8  &kp F9   &none
+	&none &trans       &trans       &bt BT_CLR    &trans       &trans             &kp F9 &kp F10 &kp F11 &kp F12 &kp CAPS &none
+	                                 &kp LGUI     &trans       &kp BSPC           &mt RGUI RET &trans   &kp RSHIFT
         >;
     };
   };
