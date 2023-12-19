@@ -53,7 +53,7 @@
       bindings = <
 	&none &kp SE_N1 &kp SE_N2 &kp SE_N3 &kp SE_N4 &kp SE_N5           &kp LBKT          &kp RBKT     &kp EQUAL    &kp SE_PLUS &kp SE_A_RING  &none
 	&none &kp SE_N6 &kp SE_N7 &kp SE_N8 &kp SE_N9 &kp SE_N0           &kp RBKT          &kp BSLH     &kp SE_PIPE  &kp SEMI    &kp SQT        &none
-	&none &kp ESC   &kp TAB   &parens   &braces   &brackets           &kp RA(LS(SE_N7)) &kp SE_GRAVE &kp SE_TILDE &trans      &kp TILDE      &none
+	&none &kp ESC   &kp TAB   &parens   &braces   &brackets           &kp RA(LS(SE_N7)) &kp SE_GRAVE &kp SE_TILDE &kp SE_PIPE &kp TILDE      &none
 	                          &kp LALT  &trans    &kp DEL             &mt RGUI RET      &mo ADJ      &kp RSHIFT
 	>;
     };
