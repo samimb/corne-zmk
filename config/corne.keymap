@@ -63,23 +63,16 @@
       #binding-cells = <0>;
       bindings = <&kp RA(SE_N8)>, <&kp RA(SE_N9)>, <&kp ESC>, <&kp I>;
     };
-    esc: tap_dance_1 {
+    qq1: tap_dance_1 {
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_1";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&kp Q>, <&kp ESC>;
-    };
-    qq1: tap_dance_2 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_2";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
       bindings = <&kp SE_A_RING>, <&kp LS(SE_PLUS)>;
     };
-    qq2: tap_dance_3 {
+    qq2: tap_dance_2 {
       compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_3";
+      label = "TAP_DANCE_2";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp LS(SE_N5)>, <&kp LS(SE_PLUS)>;
@@ -92,7 +85,7 @@
     default_layer {
       label = "DEF";
       bindings = <
-	&none &esc         &kp W      &kp E         &kp R      &kp T             &kp Y        &kp U      &kp I        &kp O      &kp P           &none
+	&none &kp Q        &kp W      &kp E         &kp R      &kp T             &kp Y        &kp U      &kp I        &kp O      &kp P           &none
 	&none &hm LSHIFT A &hm LALT S &hm LCTRL D   &hm LGUI F &kp G             &kp H        &hm RGUI J &hm RCTRL K  &hm RALT L &hm RSHIFT BSLH &none
 	&none &kp Z        &kp X      &kp C         &kp V      &kp B             &kp N        &kp M      &kp SE_COMMA &kp SE_DOT &kp SE_MINUS    &none
 	                              &mt LCTRL ESC &mo LOW    &kp BSPC          &kp RET      &mo RSE    &kp SPACE
