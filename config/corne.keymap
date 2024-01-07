@@ -79,7 +79,7 @@
     };
     qq2: tap_dance_3 {
       compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_2";
+      label = "TAP_DANCE_3";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp LS(SE_N5)>, <&kp LS(SE_PLUS)>;
