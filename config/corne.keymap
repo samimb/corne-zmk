@@ -24,14 +24,14 @@
 };
 
 / {
-    chosen {
-      zmk,battery = &vbatt;
-    };
-
-    vbatt: vbatt {
-      compatible = "zmk,battery-nrf-vddh";
-      label = "VBATT";
-    };
+//    chosen {
+//      zmk,battery = &vbatt;
+//    };
+//
+//    vbatt: vbatt {
+//      compatible = "zmk,battery-nrf-vddh";
+//      label = "VBATT";
+//    };
 
 
   behaviors {
@@ -95,27 +95,27 @@
     lower_layer {
       label = "LOW";
       bindings = <
-	&none &kp SE_N1        &kp SE_N2      &kp SE_N3       &kp SE_N4      &kp SE_N5           &kp LBKT          &kp RBKT       &kp EQUAL        &kp SE_PLUS     &qq1      &none
-	&none &hm LSHIFT SE_N6 &hm LALT SE_N7 &hm LCTRL SE_N8 &hm LGUI SE_N9 &kp SE_N0           &hm RGUI RBKT     &hm RCTRL BSLH &hm RALT SE_PIPE &hm RSHIFT SEMI &kp SQT   &none
-	&none &kp ESC          &kp TAB        &parens         &braces        &brackets           &kp RA(LS(SE_N7)) &kp SE_GRAVE   &kp SE_TILDE     &kp SE_PIPE     &kp TILDE &none
-	                                      &kp LALT        &trans         &kp DEL             &mt RGUI RET      &mo ADJ        &mt RALT SPACE
+	&none &kp SE_N1        &kp SE_N2      &kp SE_N3       &kp SE_N4      &kp SE_N5           &kp LBKT           &kp RBKT          &kp EQUAL         &kp SE_PLUS   &qq1           &none
+	&none &hm LSHIFT SE_N6 &hm LALT SE_N7 &hm LCTRL SE_N8 &hm LGUI SE_N9 &kp SE_N0           &kp RA(SE_N7)      &hm RGUI LS(RBKT) &hm RCTRL SE_PIPE &hm RALT SEMI &hm RSHIFT SQT &none
+	&none &kp ESC          &kp TAB        &parens         &braces        &brackets           &kp RA(LS(SE_N7))  &kp SE_GRAVE      &kp SE_TILDE      &kp SE_PIPE   &kp TILDE      &none
+	                                      &kp LALT        &trans         &kp DEL             &mt RGUI RET       &mo ADJ           &mt RALT SPACE
 	>;
     };
 
     raise_layer {
       label = "RSE";
       bindings = <
-	&none &kp C_VOL_UP        &kp C_BRI_UP      &kp C_PREV       &kp C_PP          &kp UNDER            &kp LS(SE_N1)      &kp LS(SE_N2)       &kp LS(SE_N3)      &kp LS(SE_N4)        &qq2          &none
-	&none &hm LSHIFT C_VOL_DN &hm LALT C_BRI_DN &hm LCTRL C_NEXT &hm LGUI SE_TILDE &kp BSLH             &hm RGUI LS(SE_N6) &hm RCTRL LS(SE_N7) &hm RALT LS(SE_N8) &hm RSHIFT LS(SE_N9) &kp LS(SE_N0) &none
-	&none &kp LS(SE_STAR)     &kp PLUS          &kp LBRC         &kp RBRC          &kp RA(SE_N7)        &kp LEFT           &kp DOWN            &kp UP             &kp RIGHT            &kp LS(BSLH)  &none
-	                                            &kp LALT         &mo ADJ           &kp BSPC             &mt RGUI RET       &trans              &mt RALT SPACE
+	&none &kp C_VOL_UP        &kp C_BRI_UP      &kp C_PREV       &kp C_PP          &kp UNDER            &kp LS(SE_N1) &kp LS(SE_N2)      &kp LS(SE_N3)       &kp LS(SE_N4)      &qq2                 &none
+	&none &hm LSHIFT C_VOL_DN &hm LALT C_BRI_DN &hm LCTRL C_NEXT &hm LGUI SE_TILDE &kp BSLH             &kp LS(SE_N6) &hm RGUI LS(SE_N7) &hm RCTRL LS(SE_N8) &hm RALT LS(SE_N9) &hm RSHIFT LS(SE_N0) &none
+	&none &kp LS(SE_STAR)     &kp PLUS          &kp LBRC         &kp RBRC          &kp RA(SE_N7)        &kp LEFT      &kp DOWN           &kp UP              &kp RIGHT          &kp LS(BSLH)         &none
+	                                            &kp LALT         &mo ADJ           &kp BSPC             &mt RGUI RET  &trans             &mt RALT SPACE
 	>;
     };
     
     adjust_layer {
       label = "ADJ";
       bindings = <
-  &none &trans       &trans       &trans        &trans       &trans             &kp F1 &kp F2  &kp F3  &kp F4  &kp F5   &none
+        &none &trans       &trans       &trans        &trans       &trans             &kp F1 &kp F2  &kp F3  &kp F4  &kp F5   &none
 	&none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4       &kp F6 &kp F6  &kp F7  &kp F8  &kp F9   &none
 	&none &trans       &trans       &bt BT_CLR    &trans       &trans             &kp F9 &kp F10 &kp F11 &kp F12 &kp CAPS &none
 	                                 &kp LGUI     &trans       &kp DEL            &mt RGUI RET &trans   &mt RALT SPACE
