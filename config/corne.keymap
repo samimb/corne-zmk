@@ -93,16 +93,6 @@
 	>;
     };
 
-    colmak_layer {
-      label = "COL";
-      bindings = <
-	&none &kp Q        &kp W      &kp F         &kp P      &kp B             &kp J        &kp L      &kp U        &kp Y      &kp BSLH     &none
-	&none &hm LSHIFT A &hm LALT R &hm LCTRL S   &hm LGUI T &kp G             &kp M        &hm RGUI N &hm RCTRL E  &hm RALT I &hm RSHIFT O &none
-	&none &kp Z        &kp X      &kp C         &kp D      &kp V             &kp K        &kp H      &kp SE_COMMA &kp SE_DOT &kp SE_MINUS &none
-	                              &mt LCTRL ESC &mo LOW    &kp BSPC          &kp RET      &mo RSE    &kp SPACE
-	>;
-    };
-
     lower_layer {
       label = "LOW";
       bindings = <
@@ -131,6 +121,16 @@
 	&none &trans       &trans       &bt BT_CLR    &trans       &trans             &kp F9  &kp F10 &kp F11 &kp F12 &kp CAPS &none
 	                                 &kp LGUI     &trans       &kp DEL            &kp RET &trans  &kp SPACE
         >;
+    };
+
+    colmak_layer {
+      label = "COL";
+      bindings = <
+	&none &kp Q        &kp W      &kp F         &kp P      &kp B             &kp J        &kp L      &kp U        &kp Y      &kp BSLH     &none
+	&none &hm LSHIFT A &hm LALT R &hm LCTRL S   &hm LGUI T &kp G             &kp M        &hm RGUI N &hm RCTRL E  &hm RALT I &hm RSHIFT O &none
+	&none &kp Z        &kp X      &kp C         &kp D      &kp V             &kp K        &kp H      &kp SE_COMMA &kp SE_DOT &kp SE_MINUS &none
+	                              &mt LCTRL ESC &mo LOW    &kp BSPC          &kp RET      &mo RSE    &kp SPACE
+	>;
     };
   };
 };
