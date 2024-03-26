@@ -1,5 +1,5 @@
 #define TD(NAME, BINDINGS) \
-  ##NAME: td_##NAME { \
+  td_##NAME: td_##NAME { \
       compatible = "zmk,behavior-tap-dance"; \
       label = "TAP_DANCE_1"; \
       #binding-cells = <0>; \
