@@ -25,6 +25,15 @@
 };
 
 / {
+  combos {
+    #include "combos.dtsi"
+  };
+  macros {
+   #include "macros.dtsi"
+  };
+  tapdance {
+   #include "tapdance.dtsi"
+  };
   behaviors {
     hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
@@ -35,38 +44,6 @@
       flavor = "balanced";
       require-prior-idle-ms = <COMBO_TIMEOUT>;
       bindings = <&kp>, <&kp>;
-    };
-    braces: braces {
-      compatible = "zmk,behavior-macro";
-      label = "BRACES";
-      #binding-cells = <0>;
-      bindings = <&kp LS(RA(SE_N8))>, <&kp LS(RA(SE_N9))>, <&kp ESC>, <&kp I>;
-    };
-    parens: parens {
-      compatible = "zmk,behavior-macro";
-      label = "PARENS";
-      #binding-cells = <0>;
-      bindings = <&kp LS(SE_N8)>, <&kp LS(SE_N9)>, <&kp ESC>, <&kp I>;
-    };
-    brackets: brackets {
-      compatible = "zmk,behavior-macro";
-      label = "BRACKETS";
-      #binding-cells = <0>;
-      bindings = <&kp RA(SE_N8)>, <&kp RA(SE_N9)>, <&kp ESC>, <&kp I>;
-    };
-    qq1: tap_dance_1 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_1";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp SE_A_RING>, <&kp LS(SE_PLUS)>;
-    };
-    qq2: tap_dance_2 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_2";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp LS(SE_N5)>, <&kp LS(SE_PLUS)>;
     };
   };
 

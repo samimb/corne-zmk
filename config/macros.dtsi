@@ -1,30 +1,15 @@
-  quotes: quotes {
-    compatible = "zmk,behavior-macro";
-    label = "quotes";
-    #binding-cells = <0>;
-    bindings = <&kp SQT>, <&kp SQT>, <&kp ESC>, <&kp LEFT>, <&kp I>;
+/* Macro macro: */
+#define str(s) #s
+#define MACRO(NAME, BINDINGS) \
+  macro_##NAME: macro_##NAME { \
+      compatible = "zmk,behavior-macro"; \
+      label = str(macro_##NAME); \
+      #binding-cells = <0>; \
+      wait-ms = <30>; \
+      tap-ms = <40>; \
+      bindings = <BINDINGS>; \
   };
-  dquotes: dquotes {
-    compatible = "zmk,behavior-macro";
-    label = "dquotes";
-    #binding-cells = <0>;
-    bindings = <&kp LS(SE_N2)>, <&kp LS(SE_N2)>, <&kp ESC>, <&kp LEFT>, <&kp I>;
-  };
-  braces: braces {
-    compatible = "zmk,behavior-macro";
-    label = "braces";
-    #binding-cells = <0>;
-    bindings = <&kp LS(RA(SE_N8))>, <&kp LS(RA(SE_N9))>, <&kp ESC>, <&kp LEFT>, <&kp I>;
-  };
-  parens: parens {
-    compatible = "zmk,behavior-macro";
-    label = "parens";
-    #binding-cells = <0>;
-    bindings = <&kp LS(SE_N8)>, <&kp LS(SE_N9)>, <&kp ESC>, <&kp LEFT>, <&kp I>;
-  };
-  brackets: brackets {
-    compatible = "zmk,behavior-macro";
-    label = "brackets";
-    #binding-cells = <0>;
-    bindings = <&kp RA(SE_N8)>, <&kp RA(SE_N9)>, <&kp ESC>, <&kp LEFT>, <&kp I>;
-  };
+
+MACRO("BRCE", "<&kp LS(RA(SE_N8))>, <&kp LS(RA(SE_N9))>, <&kp ESC>, <&kp I>")
+MACRO("PAR","<&kp LS(SE_N8)>, <&kp LS(SE_N9)>, <&kp ESC>, <&kp I>")
+MACRO("BRCK","<&kp RA(SE_N8)>, <&kp RA(SE_N9)>, <&kp ESC>, <&kp I>")

@@ -1,0 +1,11 @@
+#define TD(NAME, BINDINGS) \
+  ##NAME: td_##NAME { \
+      compatible = "zmk,behavior-tap-dance"; \
+      label = "TAP_DANCE_1"; \
+      #binding-cells = <0>; \
+      tapping-term-ms = <200>; \
+      bindings = <BINDINGS>; \
+    };
+
+TD("qq1", "<&kp SE_A_RING>, <&kp LS(SE_PLUS)>")
+TD("qq2", "<&kp LS(SE_N5)>, <&kp LS(SE_PLUS)>")
