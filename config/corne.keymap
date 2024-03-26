@@ -25,9 +25,9 @@
 };
 
 / {
-  combos {
-    #include "combos.dtsi"
-  };
+  // combos {
+  //   #include "combos.dtsi"
+  // };
   macros {
    #include "macros.dtsi"
   };
