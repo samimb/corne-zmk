@@ -7,5 +7,5 @@
       bindings = <BINDINGS>; \
     };
 
-TD("qq1", "<&kp SE_A_RING>, <&kp LS(SE_PLUS)>")
-TD("qq2", "<&kp LS(SE_N5)>, <&kp LS(SE_PLUS)>")
+TD(qq1, <&kp SE_A_RING> <&kp LS(SE_PLUS)>)
+TD(qq2, <&kp LS(SE_N5)> <&kp LS(SE_PLUS)>)

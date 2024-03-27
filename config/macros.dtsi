@@ -10,6 +10,6 @@
       bindings = <BINDINGS>; \
   };
 
-MACRO("BRCE", "<&kp LS(RA(SE_N8))>, <&kp LS(RA(SE_N9))>, <&kp ESC>, <&kp I>")
-MACRO("PAR","<&kp LS(SE_N8)>, <&kp LS(SE_N9)>, <&kp ESC>, <&kp I>")
-MACRO("BRCK","<&kp RA(SE_N8)>, <&kp RA(SE_N9)>, <&kp ESC>, <&kp I>")
+MACRO(BRCE, <&kp LS(RA(SE_N8))> <&kp LS(RA(SE_N9))> <&kp ESC> <&kp I>)
+MACRO(PAR, <&kp LS(SE_N8)> <&kp LS(SE_N9)> <&kp ESC> <&kp I>)
+MACRO(BRCK, <&kp RA(SE_N8)> <&kp RA(SE_N9)> <&kp ESC> <&kp I>)
