@@ -25,6 +25,9 @@
 };
 
 / {
+  chosen {
+    zmk,matrix-transform = &five_column_transform;
+  };
   combos {
     #include "combos.dtsi"
   };
