@@ -10,7 +10,7 @@
 #define ADJ 3
 #define HS  4
 
-#define APK(X) RS(RG(RC(X)))  
+#define APK(X) RS(RG(RC(X)))
 
 
 &mt {
