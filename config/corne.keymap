@@ -10,7 +10,7 @@
 #define ADJ 3
 #define HS  4
 
-#define APK(X) RS(RG(RC(X)))
+#define APK(X) RS(RG(RC(X))) 
 
 
 &mt {
@@ -124,10 +124,10 @@
     hammerspoon_layer {
       label = "HS";
       bindings = <
-	  &kp APK(Q) &kp APK(W) &kp APK(E) &kp APK(R) &kp APK(T)         &trans &trans &trans &trans &trans
-	  &trans     &trans     &trans     &trans     &trans             &trans &trans &trans &trans &trans
-	  &trans     &trans     &trans     &trans     &trans             &trans &trans &trans &trans &trans
-	                        &trans     &trans     &trans             &trans &trans &trans
+	  &kp APK(Q) &kp APK(W) &kp APK(E) &kp APK(R) &kp APK(T)         &kp APK(Y) &kp APK(U) &kp APK(I) &kp APK(O) &kp APK(P)
+	  &kp APK(A) &kp APK(S) &kp APK(D) &kp APK(F) &kp APK(G)         &kp APK(H) &kp APK(J) &kp APK(K) &kp APK(L) &trans
+	  &kp APK(Z) &kp APK(X) &kp APK(C) &kp APK(V) &kp APK(B)         &kp APK(N) &kp APK(M) &trans     &trans     &trans
+	                        &trans     &trans     &trans             &trans     &trans     &trans
 	>;
     };
   };
